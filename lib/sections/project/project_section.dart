@@ -7,28 +7,64 @@ class ProjectSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
-      constraints: const BoxConstraints(maxWidth: 1250),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          SizedBox(height: 20),
-          Text('Projekte', style: TextStyle(fontSize: 24)),
-          SizedBox(height: 10),
-          ProjectCard(
-            title: 'Projekt 1',
-            description: 'Beschreibung Projekt 1',
-            imageUrl:
-                'https://images.unsplash.com/photo-1506729623306-b5a934d88b53?fit=crop&w=500&h=300&q=80',
+      color: Colors.grey[200],
+      width: double.infinity,
+      child: Align(
+        child: SizedBox(
+          width: 1500,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 20),
+              const Text('Projekte', style: TextStyle(fontSize: 24)),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  ProjectCard(
+                    title: 'Fläckegosler Website',
+                    description: 'Beschreibung Projekt 1',
+                    imageUrl: 'assets/projects/flaeckegosler.png',
+                  ),
+                  ProjectCard(
+                    title: 'Airbnb Machine Learning',
+                    description: 'Beschreibung Projekt 2',
+                    imageUrl: 'assets/projects/airbnb.jpg',
+                  ),
+                  ProjectCard(
+                    title: 'Erreichbarkeitstrainer',
+                    description: 'Beschreibung Projekt 3',
+                    imageUrl: 'assets/projects/airbnb.jpg',
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  ProjectCard(
+                    title: 'Blockchain',
+                    description: 'Beschreibung Projekt 4',
+                    imageUrl: 'assets/projects/airbnb.jpg',
+                  ),
+                  ProjectCard(
+                    title: 'SoPra',
+                    description: 'Beschreibung Projekt 5',
+                    imageUrl: 'assets/projects/airbnb.jpg',
+                  ),
+                  ProjectCard(
+                    title: 'Projekt 6',
+                    description: 'Beschreibung Projekt 6',
+                    imageUrl: 'assets/projects/airbnb.jpg',
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              )
+            ],
           ),
-          ProjectCard(
-            title: 'Projekt 2',
-            description: 'Beschreibung Projekt 2',
-            imageUrl:
-                'https://images.unsplash.com/photo-1593642532400-2682810df593?fit=crop&w=500&h=300&q=80',
-          ),
-          // Füge weitere ProjectCard-Widgets hier hinzu
-        ],
+        ),
       ),
     );
   }
